@@ -1,9 +1,11 @@
 import 'package:PiraticaApp/data/data.dart';
+import 'package:PiraticaApp/responsive/size_config.dart';
 import 'package:PiraticaApp/screens/messages_screen.dart';
 import 'package:PiraticaApp/widgets/constants.dart';
 import 'package:flutter/material.dart';
 
 class RecentChats extends StatelessWidget {
+  static double tm = SizeConfig.textMultiplier;
   @override
   Widget build(BuildContext context) {
     return Expanded(
@@ -102,7 +104,7 @@ class RecentChats extends StatelessWidget {
                                       style: TextStyle(
                                           color: Colors.white,
                                           fontWeight: FontWeight.bold,
-                                          fontSize: 12.0),
+                                          fontSize: tm * 1.2),
                                     ))
                                 : Text(''),
                           ],
