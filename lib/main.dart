@@ -8,6 +8,7 @@ import 'package:PiraticaApp/screens/home_screen.dart';
 import 'package:PiraticaApp/screens/transaction_history.dart';
 import 'package:PiraticaApp/widgets/constants.dart';
 import 'package:device_preview/device_preview.dart';
+// import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -38,7 +39,7 @@ class MyApp extends StatelessWidget {
         EventHistory.id: (context) => EventHistory(),
         TransactionHistory.id: (context) => TransactionHistory(),
       },
-      initialRoute: NavScreen.id,
+      initialRoute: HomeScreen.id,
     );
   }
 }
