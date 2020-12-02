@@ -1,3 +1,4 @@
+import 'package:PiraticaApp/Services/gauth.dart';
 import 'package:PiraticaApp/widgets/signInContainer.dart';
 import 'package:flutter/material.dart';
 
@@ -42,8 +43,16 @@ class HomeScreen extends StatelessWidget {
                       SignInContainer(Colors.blue, 'Continue with Email',
                           Colors.white, 'assets/email.png'),
                       SizedBox(height: 30.0),
-                      SignInContainer(Colors.black, 'Continue with Google',
-                          Colors.white, 'assets/google.png'),
+                      GestureDetector(
+                        child: SignInContainer(
+                            Colors.black,
+                            'Continue with Google',
+                            Colors.white,
+                            'assets/google.png'),
+                        onTap: () async {
+                          await signInWithGoogle();
+                        },
+                      ),
                       SizedBox(height: 30.0),
                       SignInContainer(Colors.green, 'Continue with Apple',
                           Colors.white, 'assets/apple.png'),
